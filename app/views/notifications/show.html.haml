@@ -1,0 +1,22 @@
+%p.back= link_to "Back to Sirportly", [@application, :notifications]
+%h2 Notification ##{@notification.id}
+
+%h3 General Properties
+
+%dl.info
+  %dt Device
+  %dd= link_to @notification.device.label.blank? ? @notification.device.token : @notification.device.label  , @notification.device
+  %dt Auth Key
+  %dd= link_to @notification.auth_key.name, [:edit, @application, @notification.auth_key]
+
+%h3 Delivery Status
+%dl.info
+  %dt Pushed at
+  %dd= @notification.pushed_at ? @notification.pushed_at.to_s(:long) : 'Not pushed yet'
+  %dt Error Code
+  %dd= @notification.error ? @notification.error :  '&nbsp;'.html_safe
+  
+%h3 Alert Details
+%dl.info
+  %dt Data
+  %dd= @notification.data || '&nbsp;'.html_safe
