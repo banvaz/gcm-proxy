@@ -16,7 +16,7 @@ class Notification < ActiveRecord::Base
   end
   
   scope :asc, -> { order(:id => :desc) }
-  scope :requires_pushing, -> { where(:pushed_at => nil, :error => nil).order(:id) }
+  scope :requires_pushing, -> { where(:pushed_at => nil, :error => nil) }
   scope :unlocked, -> { where(:locked => false) }
   
   #
