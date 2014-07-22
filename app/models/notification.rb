@@ -59,7 +59,7 @@ class Notification < ActiveRecord::Base
   # Return a JSON hash for this notification
   #
   def to_hash
-    {"registration_ids" => [self.device.token]}.merge(self.data)
+    {"registration_ids" => [self.device.token], "data" => self.data}
   end
 
   #
