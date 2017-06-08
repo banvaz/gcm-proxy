@@ -17,3 +17,6 @@
 
 # Ignore IDE files
 /.idea
+
+# Ignore config
+/config/database.yml
