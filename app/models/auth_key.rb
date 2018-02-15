@@ -14,7 +14,7 @@
 #  index_auth_keys_on_application_id  (application_id)
 #
 
-class AuthKey < ActiveRecord::Base
+class AuthKey < ApplicationRecord
   
   belongs_to :application
   has_many :notifications, :dependent => :destroy

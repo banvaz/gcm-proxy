@@ -9,7 +9,7 @@
 #  updated_at :datetime
 #
 
-class Application < ActiveRecord::Base
+class Application < ApplicationRecord
   
   has_many :auth_keys, :dependent => :destroy
   has_many :notifications, :through => :auth_keys

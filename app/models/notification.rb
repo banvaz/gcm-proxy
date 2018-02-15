@@ -1,4 +1,4 @@
-class Notification < ActiveRecord::Base
+class Notification < ApplicationRecord
   
   belongs_to :auth_key
   belongs_to :device
