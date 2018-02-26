@@ -19,5 +19,12 @@ namespace :gcm_proxy do
       puts "Your database already has users in it therefore there's no need to setup."
     end
   end
+
+  desc 'Tidy notifications'
+  task :tidy_notifications => :environment do
+    puts "Deleting notifications older than #{Notification.retention_days} days"
+    count = Notification.tidy
+    puts "Removed #{count} notifications"
+  end
   
 end

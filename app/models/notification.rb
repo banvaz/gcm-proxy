@@ -96,4 +96,17 @@ class Notification < ApplicationRecord
 
     n
   end
+
+  def self.tidy(max_age_to_keep = retention_days.days)
+    if oldest = self.where("created_at < ?", max_age_to_keep.ago).last
+      where("id <= #{oldest.id}").delete_all
+    else
+      0
+    end
+  end
+
+  def self.retention_days
+    (ENV['APNS_RENTENTION_DAYS']&.to_i || 30)
+  end
+
 end
