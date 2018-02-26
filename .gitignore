@@ -21,3 +21,4 @@
 # Ignore config
 /config/database.yml
 /Procfile.local
+/config/application.yml
