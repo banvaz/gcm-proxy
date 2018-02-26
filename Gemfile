@@ -16,6 +16,7 @@ gem 'kaminari'
 gem 'haml'
 gem 'dynamic_form'
 gem 'nifty-utils'
+gem 'authie'
 
 group :development do
   gem 'spring'

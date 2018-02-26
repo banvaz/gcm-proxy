@@ -1,3 +1,23 @@
+# == Schema Information
+#
+# Table name: notifications
+#
+#  id          :integer          not null, primary key
+#  auth_key_id :integer
+#  device_id   :integer
+#  pushed_at   :datetime
+#  created_at  :datetime
+#  data        :text(65535)
+#  error       :text(65535)
+#  locked      :boolean          default(FALSE)
+#
+# Indexes
+#
+#  index_notifications_on_auth_key_id  (auth_key_id)
+#  index_notifications_on_device_id    (device_id)
+#  index_notifications_on_pushed_at    (pushed_at)
+#
+
 class Notification < ApplicationRecord
   
   belongs_to :auth_key
