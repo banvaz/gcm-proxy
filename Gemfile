@@ -17,10 +17,6 @@ gem 'nifty-utils'
 gem 'authie'
 gem 'figaro'
 
-group :development do
-  gem 'spring'
-end
-
 group :production do
   gem 'rails_serve_static_assets'
   gem 'rails_stdout_logging'
