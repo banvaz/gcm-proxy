@@ -42,7 +42,7 @@ GEM
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 13.0)
     arel (8.0.0)
-    authie (3.1.1)
+    authie (3.1.3)
     bcrypt (3.1.11)
     builder (3.2.3)
     coffee-rails (4.2.2)
@@ -83,6 +83,8 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    log_logins (1.0.2)
+      activerecord
     loofah (2.2.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -102,6 +104,8 @@ GEM
       mini_portile2 (~> 2.3.0)
     puma (3.11.2)
     rack (2.0.4)
+    rack-custom-proxies (1.0.1)
+      rack
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
     rails (5.1.5)
@@ -176,10 +180,12 @@ DEPENDENCIES
   haml
   jquery-rails
   kaminari
+  log_logins
   mysql2
   nifty-utils
   nilify_blanks
   puma
+  rack-custom-proxies
   rails
   rails_serve_static_assets
   rails_stdout_logging

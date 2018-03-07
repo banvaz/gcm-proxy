@@ -16,6 +16,8 @@ gem 'dynamic_form'
 gem 'nifty-utils'
 gem 'authie'
 gem 'figaro'
+gem 'log_logins'
+gem 'rack-custom-proxies'
 
 group :production do
   gem 'rails_serve_static_assets'
