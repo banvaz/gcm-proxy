@@ -1,7 +1,7 @@
 %h2 Please login to the GCM Proxy
 %p.intro
   Enter your username & password in order to login to this system.
-  
+  All login attempts are logged. Your IP address is #{request.ip}.
 = form_tag do
   %dl
     %dt= label_tag :username
