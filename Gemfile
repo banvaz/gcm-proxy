@@ -18,6 +18,7 @@ gem 'authie'
 gem 'figaro'
 gem 'log_logins'
 gem 'rack-custom-proxies'
+gem 'authorized_networks'
 
 group :production do
   gem 'rails_serve_static_assets'
